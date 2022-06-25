@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Running</title>
+    <style>
+      body {
+        width: 50%;
+        margin: 60px auto;
+        font-family: "Cerebri Sans", Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        background: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
+      }
+      h2 {
+        text-align: center;
+        color: #36164d;
+        font-family: Arial, Verdana, SF UI Text_, Helvetica Neue, Helvetica,
+          sans-serif;
+      }
+      h1 {
+        text-align: center;
+        font-weight: bold;
+        color: #491d7f;
+        font-family: Arial, Verdana, SF UI Text_, Helvetica Neue, Helvetica,
+          sans-serif;
+      }
+
+      img {
+        width: 550px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 5px;
+      }
+
+      p {
+        padding: 3px;
+        text-align: center;
+        font-size: 16px;
+        font-family: Arial, Verdana, SF UI Text_, Helvetica Neue, Helvetica,
+          sans-serif;
+      }
+
+      hr {
+        color: #769353;
+      }
+      .info {
+        text-align: center;
+        font-family: Arial, Verdana, SF UI Text_, Helvetica Neue, Helvetica,
+          sans-serif;
+        font-size: 16px;
+      }
+      .reasons {
+        color: #491d7f;
+        font-weight: bold;
+      }
+      .conclusion {
+        font-family: Arial, Verdana, SF UI Text_, Helvetica Neue, Helvetica,
+          sans-serif;
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 40px;
+        line-height: 1.5;
+      }
+      .link {
+        color: #491d7f;
+        text-decoration: none;
+      }
+      .subscription {
+        text-align: center;
+        font-family: Arial, Verdana, SF UI Text_, Helvetica Neue, Helvetica,
+          sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-top: 40px;
+      }
+      .coder {
+        font-size: 15px;
+        margin-top: 25px;
+        text-align: center;
+      }
+      div {
+        text-align: justify;
+        font-size: 16px;
+        font-family: Arial, Verdana, SF UI Text_, Helvetica Neue, Helvetica,
+          sans-serif;
+        line-height: 1.5;
+      }
+      button {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 20px auto;
+        padding: 15px 60px;
+        display: block;
+        color: #453064;
+        background: #aa96b7;
+        border: 1px solid #453064;
+        border-radius: 55px;
+        box-shadow: 5px 5px 10px #d7acd4;
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        background: rgb(122, 82, 159);
+        color: rgb(245, 214, 236);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <strong> Do you love running as much as I do?</strong>
+    </h1>
+    <h2>
+      Running is an opportunity to take a break from work and become a little
+      stronger 💪
+    </h2>
+    <hr />
+    <img
+      class="girl-runs"
+      src="https://applepies.ru/wp-content/uploads/2018/06/360c9bbda5e7fd9900fc26573642d53d.jpg"
+      width="700"
+      height="350"
+    />
+    <hr />
+    <p>
+      <strong> Here are a few more reasons why I love running 🏃‍♀️</strong>
+    </p>
+    <div>
+      Even a 15-minute run <span class="reasons"> will energize you</span> and
+      <span class="reasons"> make you leaner </span> by actively burning
+      calories and boosting your metabolism. While running,
+      <span class="reasons">concentration</span> and
+      <span class="reasons"> creativity increase </span> (hello, new ideas!🗯️).
+      And you can also choose a variety of routes for running and notice how
+      much beauty there is around. So, take your phone with you to take a photo
+      for Instagram📸 Regular jogging will
+      <span class="reasons"> improve the quality of your sleep, </span> and in
+      the morning you will
+      <span class="reasons"> look young and fresh.</span> Isn't that what we
+      dream about?
+    </div>
+    <br />
+    <div class="conclusion">
+      If you've been waiting to try something new, go for a run tomorrow. Run
+      alone or in company, to music or in silence, in the forest or in the city
+      center. Run at your convenience and have fun!🤩
+    </div>
+
+    <div class="info">
+      I use
+      <a href="https://www.strava.com/" target="_blank" class="link"
+        >an application
+      </a>
+      to track my progress and find running friends, join me!
+    </div>
+    <div class="subscription">
+      <em>
+        If you want to receive more useful running tips, subscribe to my
+        newsletter and we will be in touch!
+      </em>
+    </div>
+    <button>Subscribes to articles about running</button>
+
+    <p class="coder">Coded by Yuliya Melikhova</p>
+
+    <script>
+      function subscribe() {
+        let firstName = prompt("What is your name?");
+        let emailAddress = prompt("What is your e-mail address?");
+        let weeklyTips = prompt("Would you like to receive running tips?");
+        weeklyTips = weeklyTips.toLowerCase().trim();
+        if (weeklyTips === "yes") {
+          alert("Thank you, " + firstName + ", for subscribing!👋");
+        } else {
+          alert("Have a good day, " + firstName + "👍 ");
+        }
+      }
+      let subscribeButton = document.querySelector("button");
+      subscribeButton.addEventListener("click", subscribe);
+    </script>
+  </body>
+</html>
